@@ -1,0 +1,34 @@
+******************************Sorting*******************8
+#include <stdio.h>
+
+int main()
+{
+    int a, b, r;
+    printf("Enter the Range of Array : ");
+    scanf("%d",&r);
+    int n[r];
+    printf("Enter the value : ");
+    for (int i = 0; i < r; i++)
+    {
+        scanf("%d",&n[i]);
+    }
+    for (int i = 0; i < r; i++)
+    {
+        for (int j = i+1; j < r; j++)
+        {
+            if(n[i] > n[j])
+            {
+                a = n[i];
+                b = n[j];
+                n[i] = b;
+                n[j] = a;
+            }
+        }
+    }
+    printf("Array After Sorted : ");
+    for (int i = 0; i < r; i++)
+    {
+        printf("%d",n[i]);
+    }
+    
+}
